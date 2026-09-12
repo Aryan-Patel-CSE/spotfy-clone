@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a00e0" />
+      <stop offset="100%" stop-color="#8e2de2" />
+    </linearGradient>
+    <radialGradient id="v" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0.8" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" rx="16" fill="url(#g11)"/>
+  <polygon points="250,90 280,180 375,180 295,235 325,325 250,270 175,325 205,235 125,180 220,180" fill="none" stroke="#ffd700" stroke-width="4"/>
+  <rect width="500" height="500" rx="16" fill="url(#v)"/>
+  <text x="40" y="390" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="36" fill="#ffffff">YE TUNE KYA KIYA</text>
+  <text x="40" y="435" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="20" fill="#ffd700">JAVED BASHIR &amp; PRITAM</text>
+  <text x="40" y="465" font-family="'Segoe UI', Roboto, sans-serif" font-weight="400" font-size="16" fill="#e9d5ff">ONCE UPON A TIME IN MUMBAAI</text>
+</svg>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <div class="container flex">
+            <!-- Left Sidebar -->
+            <div class="left border bg-black">
+                <div class="close-btn-container">
+                    <button class="close-btn" id="closeSidebar" aria-label="Close sidebar">
+                        <img class="invert" src="close.svg" alt="Close">
+                    </button>
+                </div>
+
+                <div class="home bg-grey rounded m-1 p-1">
+                    <div class="logo">
+                        <img class="invert" src="spotify-brands-solid-full.svg" alt="Spotify">
+                        <b>Spotify</b>
+                    </div>
+                    <ul>
+                        <li class="active"><img src="house-solid.svg" alt="Home"><span>Home</span></li>
+                        <li><img src="magnifying-glass-solid.svg" alt="Search"><span>Search</span></li>
+                    </ul>
+                </div>
+
+                <div class="library bg-grey rounded m-1 p-1">
+                    <div class="heading">
+                        <div class="heading-title flex items-center">
+                            <img class="invert" src="playlist.svg" alt="Library">
+                            <h2>Your Library</h2>
+                        </div>
+                        <div class="library-badge">12 Songs</div>
+                    </div>
+
+                    <!-- Song List in Sidebar -->
+                    <div class="songList">
+                        <ul id="sidebarSongList">
+                            <!-- Populated dynamically by script.js -->
+                        </ul>
+                    </div>
+
+                    <div class="footer">
+                        <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                        <div><a href="https://www.spotify.com/jp/privacy/"><span>Safety &amp; Privacy</span></a></div>
+                        <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a></div>
+                        <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                        <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="right border bg-grey rounded">
+                <div class="header">
+                    <div class="header-left flex items-center">
+                        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+                            <img class="invert" src="hamburger.svg" alt="Menu">
+                        </button>
+                        <div class="nav">
+                            <button class="nav-btn" id="navBack" aria-label="Go back">
+                                <img src="chevron-left-solid-full.svg" alt="Back">
+                            </button>
+                            <button class="nav-btn" id="navForward" aria-label="Go forward">
+                                <img src="chevron-right-solid-full.svg" alt="Forward">
+                            </button>
+                        </div>
+                        <div class="category-pills">
+                            <span class="pill active">All</span>
+                            <span class="pill">Music</span>
+                            <span class="pill">Podcasts</span>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="#" class="spotify-signup-btn">Sign up</a>
+                        <a href="#" class="spotify-login-btn">Log in</a>
+                    </div>
+                </div>
+
+                <!-- Playlist Section -->
+                <div class="spotifyPlaylist">
+                    <div class="playlist-header flex justify-between items-center">
+                        <div>
+                            <h1>All Tracks from MUSIC</h1>
+                            <p class="playlist-subtitle">Your offline collection ready to stream • High Quality Audio</p>
+                        </div>
+                        <button class="btn-play-all" id="playAllBtn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            Play All
+                        </button>
+                    </div>
+
+                    <div class="cardContainer" id="cardContainer">
+                        <!-- Populated dynamically by script.js with all 12 songs -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Bottom Playbar -->
+        <footer class="playbar">
+            <!-- Left: Current Song Info -->
+            <div class="current-track-info flex items-center">
+                <img id="currentTrackCover" class="current-track-cover" src="covers/cover1.svg" alt="Cover Art">
+                <div class="current-track-text">
+                    <div class="songinfo" id="songTitle">One Love</div>
+                    <div class="songartist" id="songArtist">Shubh</div>
+                </div>
+                <button class="like-btn" id="likeBtn" aria-label="Like song">
+                    <img id="likeIcon" src="heart.svg" alt="Like">
+                </button>
+            </div>
+
+            <!-- Center: Controls & Seekbar -->
+            <div class="playbar-center flex flex-col items-center">
+                <div class="songButton flex items-center">
+                    <button class="control-btn" id="shuffleBtn" title="Shuffle (S)">
+                        <img src="shuffle.svg" class="invert" alt="Shuffle">
+                    </button>
+                    <button class="control-btn" id="previous" title="Previous (P / Left Arrow)">
+                        <img src="backward-step-solid.svg" alt="Previous">
+                    </button>
+                    <button class="control-btn play-main-btn" id="play" title="Play/Pause (Space)">
+                        <img id="playIconImg" src="play-solid-full.svg" alt="Play">
+                    </button>
+                    <button class="control-btn" id="next" title="Next (N / Right Arrow)">
+                        <img src="forward-step-solid.svg" alt="Next">
+                    </button>
+                    <button class="control-btn" id="repeatBtn" title="Repeat (R)">
+                        <img src="repeat.svg" class="invert" alt="Repeat">
+                    </button>
+                </div>
+
+                <div class="playback-bar flex items-center">
+                    <span class="songtime songtime-current" id="currentTime">00:00</span>
+                    <div class="seekbar" id="seekbar" role="slider" aria-label="Playback progress" tabindex="0">
+                        <div class="seek-progress" id="seekProgress"></div>
+                        <div class="circle" id="seekCircle"></div>
+                    </div>
+                    <span class="songtime songtime-total" id="totalDuration">00:00</span>
+                </div>
+            </div>
+
+            <!-- Right: Volume & Options -->
+            <div class="playbar-right flex items-center">
+                <div class="volume flex items-center">
+                    <button class="volume-btn" id="volumeBtn" aria-label="Mute / Unmute">
+                        <img id="volumeIcon" class="invert" src="volume.svg" alt="Volume">
+                    </button>
+                    <div class="range">
+                        <input type="range" id="volumeSlider" min="0" max="100" value="80" aria-label="Volume">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

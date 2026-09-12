@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2027" />
+      <stop offset="50%" stop-color="#203A43" />
+      <stop offset="100%" stop-color="#2C5364" />
+    </linearGradient>
+    <radialGradient id="v" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0.8" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" rx="16" fill="url(#g9)"/>
+  <path d="M250 140 C210 90 140 120 140 180 C140 250 250 320 250 320 C250 320 360 250 360 180 C360 120 290 90 250 140 Z" fill="none" stroke="#e63946" stroke-width="6"/>
+  <path d="M245 150 L255 240 L235 250 L260 310" stroke="#e63946" stroke-width="4" fill="none"/>
+  <rect width="500" height="500" rx="16" fill="url(#v)"/>
+  <text x="40" y="390" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="36" fill="#ffffff">HEARTBREAK KID</text>
+  <text x="40" y="435" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="22" fill="#ff6b6b">TALHA ANJUM</text>
+  <text x="40" y="465" font-family="'Segoe UI', Roboto, sans-serif" font-weight="400" font-size="16" fill="#cbd5e1">OPEN LETTER</text>
+</svg>

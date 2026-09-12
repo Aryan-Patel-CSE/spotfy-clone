@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141E30" />
+      <stop offset="100%" stop-color="#243B55" />
+    </linearGradient>
+    <radialGradient id="v" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0.8" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" rx="16" fill="url(#g3)"/>
+  <circle cx="250" cy="210" r="110" fill="#e63946" opacity="0.85"/>
+  <path d="M210 210 Q250 250 290 210" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="225" cy="185" r="8" fill="#ffffff"/>
+  <circle cx="275" cy="185" r="8" fill="#ffffff"/>
+  <rect width="500" height="500" rx="16" fill="url(#v)"/>
+  <text x="40" y="410" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="34" fill="#ffffff">DIE WITH A SMILE</text>
+  <text x="40" y="450" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="20" fill="#a8dadc">LADY GAGA &amp; BRUNO MARS</text>
+</svg>
